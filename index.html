@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		<meta name="description" content="MOIN App">
+		<meta name="author" content="Bastian Vennemann">
+		
+		<!-- kann spaeter geloescht werden: -->
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/font-awesome.min.css" rel="stylesheet">
+		<link href="css/prettyPhoto.css" rel="stylesheet">
+		<link href="css/animate.css" rel="stylesheet">
+		<link href="css/main.css" rel="stylesheet">
+        <title>MOIN</title>
+    </head>
+    <body>
+		<header class="navbar navbar-inverse navbar-fixed-top wet-asphalt" role="banner">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html"><img src="logo/logo_blank.png" alt="logo"></a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a href="index.html">Home</a></li>
+						<li><a href="#">Settings</a></li>
+						<li><a href="#">About</a></li>
+						<!--
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="icon-angle-down"></i></a>
+							<ul class="dropdown-menu">
+								<li><a href="career.html">Career</a></li>
+								<li><a href="blog-item.html">Blog Single</a></li>
+								<li><a href="pricing.html">Pricing</a></li>
+								<li><a href="404.html">404</a></li>
+								<li><a href="registration.html">Registration</a></li>
+								<li class="divider"></li>
+								<li><a href="privacy.html">Privacy Policy</a></li>
+								<li><a href="terms.html">Terms of Use</a></li>
+							</ul>
+						</li>
+						//-->
+					</ul>
+				</div>
+			</div>
+		</header><!--/header-->	
+		
+		<section id="contacts" class="emerald">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-sm-6">
+						<div class="media">
+							<div class="pull-left">
+								<i class="fa fa-user icon-md"></i>
+							</div>
+							<div class="media-body">
+								<h3 class="media-heading">Heiko Westermann</h3>
+								<p>Weitere Infos zur Person</p>
+							</div>
+						</div>
+					</div><!--/.col-md-4-->
+					<div class="col-md-4 col-sm-6">
+						<div class="media">
+							<div class="pull-left">
+								<i class="fa fa-user icon-md"></i>
+							</div>
+							<div class="media-body">
+								<h3 class="media-heading">Maximilian Beister</h3>
+								<p>Weitere Infos zur Person</p>
+							</div>
+						</div>
+					</div><!--/.col-md-4-->
+					<div class="col-md-4 col-sm-6">
+						<div class="media">
+							<div class="pull-left">
+								<i class="fa fa-user icon-md"></i>
+							</div>
+							<div class="media-body">
+								<h3 class="media-heading">Rene Adler</h3>
+								<p>Weitere Infos zur Person</p>
+							</div>
+						</div>
+					</div><!--/.col-md-4-->
+				</div>
+			</div>
+		</section><!--/#contacts-->
+
+
+		<section id="testimonial" class="alizarin">
+			<div class="container app">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="center">
+							<h2>MOIN!</h2>
+							<p>Diese App haut dich vom Hocker...</p>
+						</div>
+						<div class="gap"></div>
+						<div id="deviceready" class="blink">
+							<p class="event listening">Connecting to Device</p>
+							<p class="event received">Device is Ready</p>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<blockquote>
+									<p id="myregid" style="font-family:Courier New, Courier;font-size: 30px;overflow-wrap: break-word !important; text-transform: none;">
+										regid = söldfdöslfklösfdklm sdk fnsklfn yn flks fl flk
+									</p>
+									<small>so lautet deine <cite title="Source Title">regid</cite></small>
+								</blockquote>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!--/#testimonial-->
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.prettyPhoto.js"></script>
+		<script src="js/main.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="PushNotification.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
