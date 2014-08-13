@@ -74,7 +74,7 @@ jQuery(function($) {
 			type: 'POST',
 			//data: postData+'&amp;lid='+landmarkID,
 			data: postData
-			url: 'http://your-domain.com/comments/save.php',
+			url: 'http://www.vennemann.us/moin/register.php',
 			success: function(data){
 				console.log(data);
 				alert('Your Account was successfully added');
