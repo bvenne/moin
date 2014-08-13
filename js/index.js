@@ -61,6 +61,9 @@ onNotificationGCM: function(e) {
                     
                     document.getElementById("myregid").innerHTML = "registration id = "+e.regid;
                     
+                    //Put regid to register form:
+                    document.getElementById("regId").value = e.regid;
+                    
                     //var parentElement = document.getElementById(id);
 					//var reggi_id = parentElement.querySelector('.myregid');
 					//reggi_id.innerHTML += 'ID lautet: '+e.regid;
