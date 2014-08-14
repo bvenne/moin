@@ -73,7 +73,7 @@ jQuery(function($) {
 		$.ajax({
 			type: 'POST',
 			//data: postData+'&amp;lid='+landmarkID,
-			data: postData
+			data: postData,
 			url: 'http://www.vennemann.us/moin/register.php',
 			success: function(data){
 				console.log(data);
