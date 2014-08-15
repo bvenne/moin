@@ -88,6 +88,25 @@ jQuery(function($) {
 		return false;
 	});
 
+
+	//test send from venni to venni
+	$('#send_to_venni').submit(function(){
+		var getData = $(this).serialize();
+		$.ajax({
+			type: 'GET',
+			data: getData,
+			url: 'http://www.vennemann.us/moin/send_message.php',
+			success: function(data){
+				alert('Your message to user venni was successfully sent');
+			},
+			error: function(){
+				alert('There was an error sending message to venni');
+			}
+		});
+		
+		return false;
+	});
+
 	
 	
 	
