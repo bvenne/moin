@@ -67,7 +67,6 @@ jQuery(function($) {
 	
 	//REGISTER
 	$('#register_user').submit(function(){
-		//var landmarkID = $(this).parent().attr('data-landmark-id');
 		var postData = $(this).serialize();
 		
 		$.ajax({
