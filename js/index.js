@@ -118,7 +118,7 @@ onNotificationGCM: function(e) {
 */
 
 
-
+/*
 // display the address information for all contacts
 function onSuccess(contacts) {
     for (var i = 0; i < contacts.length; i++) {
@@ -137,7 +137,7 @@ var options = new ContactFindOptions();
 options.filter = "";
 var filter = ["displayName", "emails"];
 navigator.contacts.find(filter, onSuccess, onError, options);
-
+*/
     
     
     
