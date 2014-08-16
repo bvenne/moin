@@ -92,10 +92,53 @@ onNotificationGCM: function(e) {
               alert('An unknown GCM event has occurred');
               break;
         }
-    }   
+    }, 
     
     
-    
+
+	//READ CONTACTS...
+/*
+  function getContactList() {
+        var contactList = new ContactFindOptions(); 
+        contactList.filter=""; 
+        contactList.multiple=true;
+        var fields = ["*"];  //"*" will return all contact fields
+        navigator.contacts.find(fields,  getContactFields, contactList );
+    }
+
+
+  function getContactFields(contacts) {
+         for (var i=0; i<contacts.length; i++)
+        {
+               alert(contacts.length);
+               alert("Name:" + contacts[i].displayName + "\n"+
+                         "E-Mail:"+ contacts[i].emails)
+				for (var j=0; j<contacts[i].emails.length; j++) {
+					alert("E-Mail hier: " + contacts[i].emails[j].type);
+				}
+		}  
+	}
+
+*/
+
+
+// display the address information for all contacts
+onSuccess: function(contacts) {
+    for (var i = 0; i < contacts.length; i++) {
+        alert("Formatted: "  + contacts[i].name.formatted       + "\n" +
+            "Family Name: "  + contacts[i].name.familyName      + "\n" +
+            "Given Name: "   + contacts[i].name.givenName       + "\n" +
+            "Middle Name: "  + contacts[i].name.middleName      + "\n" +
+            "Suffix: "       + contacts[i].name.honorificSuffix + "\n" +
+            "Prefix: "       + contacts[i].name.honorificSuffix);
+    }
+},
+
+onError: function(contactError) {
+    alert('onError!');
+}
+
+
     
     
     
