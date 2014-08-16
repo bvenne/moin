@@ -305,10 +305,7 @@
 EO FB //-->
 
 
-
-
-
-
+        
 <script>
 	
 	
@@ -351,11 +348,7 @@ function onError(contactError) {
     alert('onError!');
 };
 
-// find all contacts
-var options = new ContactFindOptions();
-options.filter = "";
-var filter = ["displayName", "emails"];
-navigator.contacts.find(filter, onSuccess, onError, options);
+
 
 </script>
 
@@ -365,5 +358,8 @@ navigator.contacts.find(filter, onSuccess, onError, options);
         <script type="text/javascript">
             app.initialize();
         </script>
+
+
+
     </body>
 </html>

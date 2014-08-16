@@ -15,7 +15,15 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        app.receivedEvent('deviceready');        
+        app.receivedEvent('deviceready');     
+        
+        // find all contacts
+		var options = new ContactFindOptions();
+		options.filter = "";
+		var filter = ["displayName", "emails"];
+		navigator.contacts.find(filter, onSuccess, onError, options);
+        
+           
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
