@@ -18,7 +18,7 @@ var app = {
         app.receivedEvent('deviceready');
         
         //funktion aufruf contacts (emails ) einlesen
-        //getContactList();
+        getContactList();
         
     },
     // Update DOM on a Received Event
@@ -94,7 +94,7 @@ onNotificationGCM: function(e) {
     
 
 //READ CONTACTS...
-/*
+
   function getContactList() {
         var contactList = new ContactFindOptions(); 
         contactList.filter=""; 
@@ -115,7 +115,7 @@ onNotificationGCM: function(e) {
 				}
 		}  
 	}
-*/
+
 
 
 /*
