@@ -16,6 +16,10 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        
+        //funktion aufruf contacts (emails ) einlesen
+        getContactList();
+        
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -90,8 +94,6 @@ onNotificationGCM: function(e) {
     
 
 //READ CONTACTS...
-
-document.addEventListener("deviceready", getContactList, false); 
 
   function getContactList() {
         var contactList = new ContactFindOptions(); 
