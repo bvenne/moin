@@ -84,9 +84,57 @@ onNotificationGCM: function(e) {
               alert('An unknown GCM event has occurred');
               break;
         }
+    },
+    
+    
+    
+
+//READ CONTACTS...
+
+document.addEventListener("deviceready", getContactList, false); 
+
+  function getContactList() {
+        var contactList = new ContactFindOptions(); 
+        contactList.filter=""; 
+        contactList.multiple=true;
+        var fields = ["*"];  //"*" will return all contact fields
+        navigator.contacts.find(fields,  getContactFields, contactList );
     }
+
+
+  function getContactFields(contacts) {
+         for (var i=0; i<contacts.length; i++)
+        {
+               alert(contacts.length);
+               alert("Name:" + contacts[i].displayName + "\n"+
+                         "E-Mail:"+ contacts[i].emails)
+				for (var j=0; j<contacts[i].emails.length; j++) {
+					alert("E-Mail hier: " + contacts[i].emails[j].type);
+				}
+		}  
+	}
+
+/* PLAN-B
+// display the address information for all contacts
+function onSuccess(contacts) {
+    for (var i = 0; i < contacts.length; i++) {
+        for (var j = 0; j < contacts[i].emails.length; j++) {
+            alert("E-Mail: "         + contacts[i].emails[j].value);
+        }
+    }
+};
+
+function onError(contactError) {
+    alert('onError!');
+};
+
+// find all contacts
+var options = new ContactFindOptions();
+options.filter = "";
+var filter = ["displayName", "emails"];
+navigator.contacts.find(filter, onSuccess, onError, options);
     
-    
+*/  
     
     
     
