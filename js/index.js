@@ -18,7 +18,7 @@ var app = {
         app.receivedEvent('deviceready');
         
         //funktion aufruf contacts (emails ) einlesen
-        getContactList();
+        //getContactList();
         
     },
     // Update DOM on a Received Event
@@ -94,7 +94,7 @@ onNotificationGCM: function(e) {
     
 
 //READ CONTACTS...
-
+/*
   function getContactList() {
         var contactList = new ContactFindOptions(); 
         contactList.filter=""; 
@@ -115,8 +115,10 @@ onNotificationGCM: function(e) {
 				}
 		}  
 	}
+*/
 
-/* PLAN-B
+
+
 // display the address information for all contacts
 function onSuccess(contacts) {
     for (var i = 0; i < contacts.length; i++) {
@@ -135,8 +137,7 @@ var options = new ContactFindOptions();
 options.filter = "";
 var filter = ["displayName", "emails"];
 navigator.contacts.find(filter, onSuccess, onError, options);
-    
-*/  
+
     
     
     
