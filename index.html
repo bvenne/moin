@@ -154,11 +154,10 @@
 <br /><br /><br />
 
 
-<!-- FB //-->
+<!-- FB 
 <section>
 <button onclick="login()">Login</button>
 <button onclick="me()">Me</button>
-<!--<button onclick="getSession()">Get session</button>-->
 <button onclick="getLoginStatus()">Get login</button>
 <button onclick="logout()">Logout</button>
 <button onclick="facebookWallPost()">facebookWallPost</button>
@@ -166,6 +165,7 @@
 <div id="data">loading ...</div>
 <div id="fb-root"></div>
 </section>
+//-->
 
 
 		<script src="js/jquery.js"></script>
@@ -174,16 +174,18 @@
 		<script src="js/main.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="PushNotification.js"></script>
-        <!-- facebook connect -->
-       	<script src="cdv-plugin-fb-connect.js"></script>
-		<!-- facebook js sdk -->
+        <!-- facebook connect 
+			<script src="cdv-plugin-fb-connect.js"></script>
+       	-->
+		<!-- facebook js sdk 
 		<script src="facebook-js-sdk.js"></script>
+		-->
         <script type="text/javascript" src="js/index.js"></script>
 
 
-<!-- FB //-->
+<!-- FB 
 	<script>
-		<!-- These are the notifications that are displayed to the user through pop-ups if the above JS files does not exist in the same directory-->
+		/* These are the notifications that are displayed to the user through pop-ups if the above JS files does not exist in the same directory */
 		if ((typeof cordova == 'undefined') && (typeof Cordova == 'undefined')) alert('Cordova variable does not exist. Check that you have included cordova.js correctly');
 		if (typeof CDV == 'undefined') alert('CDV variable does not exist. Check that you have included cdv-plugin-fb-connect.js correctly');
 		if (typeof FB == 'undefined') alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
@@ -294,7 +296,8 @@
 		}, false);
 </script>
 <div id="log"></div>
-<!-- EO FB //-->
+
+EO FB //-->
 
 
 
