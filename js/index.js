@@ -18,10 +18,10 @@ var app = {
         app.receivedEvent('deviceready');     
         
         // find all contacts
-		var options = new ContactFindOptions();
-		options.filter = "";
-		var filter = ["displayName", "emails"];
-		navigator.contacts.find(filter, onSuccess, onError, options);
+var options = new ContactFindOptions();
+options.filter = "";
+filter = ["displayName", "name"];
+navigator.contacts.find(filter, onSuccess, onError, options);
         
            
     },

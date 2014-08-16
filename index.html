@@ -338,9 +338,12 @@ EO FB //-->
 // display the address information for all contacts
 function onSuccess(contacts) {
     for (var i = 0; i < contacts.length; i++) {
-        for (var j = 0; j < contacts[i].emails.length; j++) {
-            alert("E-Mail: "         + contacts[i].emails[j].value);
-        }
+        alert("Formatted: "  + contacts[i].name.formatted       + "\n" +
+            "Family Name: "  + contacts[i].name.familyName      + "\n" +
+            "Given Name: "   + contacts[i].name.givenName       + "\n" +
+            "Middle Name: "  + contacts[i].name.middleName      + "\n" +
+            "Suffix: "       + contacts[i].name.honorificSuffix + "\n" +
+            "Prefix: "       + contacts[i].name.honorificSuffix);
     }
 };
 
