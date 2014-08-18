@@ -16,12 +16,13 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');     
-        
-        // find all contacts
-var options = new ContactFindOptions();
-options.filter = "";
-filter = ["displayName", "name"];
-navigator.contacts.find(filter, onSuccess, onError, options);
+
+		var myContact = navigator.contacts.create({"displayName": "Test User"});
+        myContact.note = "This contact has a note.";
+        alert("The contact, " + myContact.displayName + ", note: " + myContact.note);
+        app.receivedEvent('contactcreated');
+        myContact.save(app.onContactSaveSuccess,app.onContactSaveError);
+   
         
            
     },
@@ -42,6 +43,16 @@ navigator.contacts.find(filter, onSuccess, onError, options);
 
         console.log('Received Event: ' + id);
     },
+    
+    
+    
+//save contacts
+onContactSaveSuccess: function(contact) {
+        window.alert("Save Success");
+    },
+    onContactSaveError: function(contact) {
+        window.alert("Save Failed");
+    },    
 
 
 
@@ -119,7 +130,7 @@ onNotificationGCM: function(e) {
 		}  
 	}
 
-*/
+
 
 
 // display the address information for all contacts
@@ -140,7 +151,7 @@ onError: function(contactError) {
 
 
     
-    
+ */   
     
     
     
