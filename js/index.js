@@ -26,10 +26,14 @@ var app = {
 */
 
 		// find all contacts
-		var myContacts = new ContactFindOptions();
-		myContacts.filter = "";
+		alert("start find all contacts");
+		var options = new ContactFindOptions();
+		alert("options: ", options);
+		options.filter = "";
+		alert("options-filter: ", options.filter);
 		var filter = ["displayName", "addresses"];
-		navigator.contacts.find(filter, app.onReadContactsSuccess, app.onReadContactsError, myContacts);
+		alert("filter: ", filter);
+		navigator.contacts.find(filter, app.onReadContactsSuccess, app.onReadContactsError, options);
 		app.receivedEvent('contactcreated');
 		
    
@@ -66,6 +70,7 @@ onContactSaveSuccess: function(contact) {
 
 // read contacts
 onReadContactsSuccess: function(contacts) {
+	alert("onReadContactsSuccess wird aufgerufen!!");
 			for (var i = 0; i < contacts.length; i++) {
 			for (var j = 0; j < contacts[i].addresses.length; j++) {
 				alert("Pref: "         + contacts[i].addresses[j].pref          + "\n" +
@@ -79,8 +84,8 @@ onReadContactsSuccess: function(contacts) {
 			}
 		}
     },
-    onReadContactsError: function(contacts) {
-        window.alert("Read Failed", contact);
+    onReadContactsError: function(contactError) {
+        window.alert("Read Failed!!", contactError);
     },    
 
 
