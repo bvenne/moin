@@ -29,7 +29,7 @@ var app = {
 		var myContacts = new ContactFindOptions();
 		myContacts.filter = "";
 		var filter = ["displayName", "addresses"];
-		navigator.contacts.find(filter, app.onReadContactsSuccess, app.onReadContactsError, options);
+		navigator.contacts.find(filter, app.onReadContactsSuccess, app.onReadContactsError, myContacts);
 		app.receivedEvent('contactcreated');
 		
    
